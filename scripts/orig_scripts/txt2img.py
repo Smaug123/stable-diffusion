@@ -233,7 +233,12 @@ def main():
         print(f"reading prompts from {opt.from_file}")
         with open(opt.from_file, "r") as f:
             data = f.read().splitlines()
-            data = list(chunk(data, batch_size))
+            if (len(data) >= batch_size):
+                data = list(chunk(data, batch_size))
+            else:
+                while (len(data) < batch_size):
+                    data.append(data[-1])
+                data = [data]
 
     sample_path = os.path.join(outpath, "samples")
     os.makedirs(sample_path, exist_ok=True)
