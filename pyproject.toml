@@ -162,7 +162,6 @@ yarl = { version = "^1.8.1", source = "pypi-public" }
 zipp = { version = "^3.8.1", source = "pypi-public" }
 matplotlib = { version = "*", source = "pypi-public" }
 wheel = { version = "*", source = "pypi-public" }
-pyreadline3 = { version = "*", source = "pypi-public" }
 colorama = { version = "*", source = "pypi-public" }
 shapely = { version = "*", source = "pypi-public" }
 cycler = { version = "*", source = "pypi-public" }

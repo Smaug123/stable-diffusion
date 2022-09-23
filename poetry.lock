@@ -4196,7 +4196,6 @@ shapely = [
 ]
 shortuuid = [
     {file = "shortuuid-1.0.9-py3-none-any.whl", hash = "sha256:b2bb9eb7773170e253bb7ba25971023acb473517a8b76803d9618668cb1dd46f"},
-    {file = "shortuuid-1.0.9.tar.gz", hash = "sha256:459f12fa1acc34ff213b1371467c0325169645a31ed989e268872339af7563d5"},
 ]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
