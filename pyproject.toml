@@ -143,7 +143,7 @@ toolz = { version = "^0.12.0", source = "pypi-public" }
 torch-fidelity = { version = "^0.3.0", source = "pypi-public" }
 torchdiffeq = { version = "^0.2.3", source = "pypi-public" }
 torchmetrics = { version = "^0.6.0", source = "pypi-public" }
-torchvision = { version = "", source = "pypi-public" }
+torchvision = { version = "^0.11.3", source = "pypi-public" }
 tornado = { version = "^6.2", source = "pypi-public" }
 tqdm = { version = "^4.62.3", source = "pypi-public" }
 transformers = { version = "^4.21.1", source = "pypi-public" }
@@ -165,16 +165,13 @@ wheel = { version = "*", source = "pypi-public" }
 pyreadline3 = { version = "*", source = "pypi-public" }
 colorama = { version = "*", source = "pypi-public" }
 shapely = { version = "*", source = "pypi-public" }
-setuptools = { version = "*", source = "pypi-public" }
 cycler = { version = "*", source = "pypi-public" }
 tomli = { version = "*", source = "pypi-public" }
 fonttools = { version = "*", source = "pypi-public" }
 kiwisolver = { version = "*", source = "pypi-public" }
-setuptools-scm = { version = "*", source = "pypi-public" }
 fsspec = { git = "https://github.com/fsspec/filesystem_spec", rev = "025d846db553f7498c106326ac005656ebfa3bb7" }
 
 torch = { version = "^1.13.0.dev20220904", source = "torch-repo" }
-torchaudio = { version = "^0.13.0.dev20220904", source = "torch-repo" }
 
 [build-system]
 requires = ["poetry-core"]

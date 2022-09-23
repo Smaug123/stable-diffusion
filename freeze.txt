@@ -119,7 +119,7 @@ tifffile==2022.8.12
 tokenizers==0.12.1
 toml==0.10.2
 toolz==0.12.0
-torch==1.13.0.dev20220904
+torch==1.13.0.dev20220918
 torch-fidelity==0.3.0
 torchaudio==0.13.0.dev20220904
 torchdiffeq==0.2.3
