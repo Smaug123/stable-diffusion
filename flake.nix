@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
-    poetry2nix.url = "github:Smaug123/poetry2nix/relative-absolute";
+    poetry2nix.url = "github:Smaug123/poetry2nix/17946fccc2a4e86961db68cea465893116b7d8fa";
     alejandra = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:kamadorueda/alejandra/3.0.0";
