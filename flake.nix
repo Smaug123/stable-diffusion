@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
-    poetry2nix.url = "github:Smaug123/poetry2nix/b4e9819050d31c9a4b909b88732546c8ceae4a34";
+    poetry2nix.url = "github:Smaug123/poetry2nix/694a82f3562bdde4108badefc3a058c7743cae36";
     alejandra = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:kamadorueda/alejandra/3.0.0";
@@ -31,7 +31,9 @@
             projectDir = ./.;
             python = python;
             overrides = pkgs.poetry2nix.overrides.withDefaults (self: super: {
-	      onnx = nixpkgs.pythonPackages.onnx;
+	      onnx = pkgs.python3Packages.onnx;
+	      scipy = pkgs.python3Packages.scipy;
+	      matplotlib = pkgs.python3Packages.matplotlib;
   });
           };
         in [alejandra.defaultPackage.aarch64-darwin "${env}/bin/python"];

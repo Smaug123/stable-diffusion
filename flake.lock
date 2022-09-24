@@ -112,17 +112,17 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1664017139,
-        "narHash": "sha256-j+ZQxg/y85x7RA4bKn2kklPx7wOBUc15soWdcKjEjSY=",
+        "lastModified": 1664048736,
+        "narHash": "sha256-hEwL/QkBN+uS6RnrBLOuY8NP8oRYyeEiZvsv0OYYMWM=",
         "owner": "Smaug123",
         "repo": "poetry2nix",
-        "rev": "a57c605fde580f967f2bc601d8c19856168b2e28",
+        "rev": "694a82f3562bdde4108badefc3a058c7743cae36",
         "type": "github"
       },
       "original": {
         "owner": "Smaug123",
         "repo": "poetry2nix",
-        "rev": "a57c605fde580f967f2bc601d8c19856168b2e28",
+        "rev": "694a82f3562bdde4108badefc3a058c7743cae36",
         "type": "github"
       }
     },
