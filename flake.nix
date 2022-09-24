@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
-    poetry2nix.url = "github:Smaug123/poetry2nix/17946fccc2a4e86961db68cea465893116b7d8fa";
+    poetry2nix.url = "github:Smaug123/poetry2nix/b4e9819050d31c9a4b909b88732546c8ceae4a34";
     alejandra = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:kamadorueda/alejandra/3.0.0";
@@ -30,13 +30,9 @@
           env = pkgs.poetry2nix.mkPoetryEnv {
             projectDir = ./.;
             python = python;
-            #overrides = pkgs.poetry2nix.overrides.withDefaults (self: super: {
-    #torch = super.torch.override {
-    #    preferWheel = true;
-    #}; #"torch-1.13.0.dev20220904";
-    #torchvision = "torchvision-0.12.0";
-    #torchaudio = "torchaudio-0.13.0.dev20220904";
-  #});
+            overrides = pkgs.poetry2nix.overrides.withDefaults (self: super: {
+	      onnx = nixpkgs.pythonPackages.onnx;
+  });
           };
         in [alejandra.defaultPackage.aarch64-darwin "${env}/bin/python"];
 
