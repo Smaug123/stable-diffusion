@@ -55,8 +55,13 @@
                   ${pkgs.gnused}/bin/sed -i "s!    requirements = f.read().splitlines()!!g" setup.py
                 '';
             };
+            opencv-python-headless = self.opencv-python;
             k-diffusion = super.k-diffusion.overridePythonAttrs {
-                nativeBuildInputs = (self.nativeBuildInputs or []) ++ [ pkgs.git ];
+                preConfigure = ''
+                  ${pkgs.gnused}/bin/sed -i "s!    CLIP @ git+https://github.com/openai/CLIP!    clip!g" setup.cfg
+                  ${pkgs.gnused}/bin/sed -i "s!    kornia!!g" setup.cfg
+                '';
+                buildInputs = (self.buildInputs or []) ++ [ self.clip ];
             };
   });
           };
