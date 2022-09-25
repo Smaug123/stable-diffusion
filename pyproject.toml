@@ -71,7 +71,6 @@ Jinja2 = { version = "== 3.1.2", source = "pypi-public" }
 jsonmerge = { version = "== 1.8.0", source = "pypi-public" }
 jsonschema = { version = "== 4.14.0", source = "pypi-public" }
 k-diffusion = { git = "https://github.com/crowsonkb/k-diffusion", rev = "4567328deec0f90a549dde53c1858cf7ed0140dd" }
-kornia = { version = "== 0.6.0", source = "pypi-public" }
 latent-diffusion = { git = "https://github.com/CompVis/latent-diffusion", rev = "a506df5756472e2ebaf9078affdde2c4f1502cd4" }
 Markdown = { version = "== 3.4.1", source = "pypi-public" }
 MarkupSafe = { version = "== 2.1.1", source = "pypi-public" }
