@@ -15,6 +15,7 @@ from contextlib import nullcontext
 import time
 from pytorch_lightning import seed_everything
 
+sys.path.insert(0, "/Users/patrick/Documents/GitHub/stable-diffusion")
 from ldm.util import instantiate_from_config
 from ldm.models.diffusion.ddim import DDIMSampler
 from ldm.models.diffusion.plms import PLMSSampler

@@ -9,6 +9,7 @@ import sys
 import copy
 import warnings
 import time
+sys.path.insert(0, "/Users/patrick/Documents/GitHub/stable-diffusion")
 import ldm.dream.readline
 from ldm.dream.pngwriter import PngWriter, PromptFormatter
 from ldm.dream.server import DreamServer, ThreadingDreamServer
@@ -20,6 +21,14 @@ from omegaconf import OmegaConf
 # Just want to get the formatting look right for now.
 output_cntr = 0
 
+
+from diffusers.pipelines.stable_diffusion import safety_checker
+
+def sc(self, clip_input, images) :
+    return images, [False for i in images]
+
+# edit StableDiffusionSafetyChecker class so that, when called, it just returns the images and an array of True values
+safety_checker.StableDiffusionSafetyChecker.forward = sc
 
 def main():
     """Initialize command-line parsers and the diffusion model"""
@@ -396,7 +405,7 @@ SAMPLER_CHOICES = [
 def create_argv_parser():
     parser = argparse.ArgumentParser(
         description="""Generate images using Stable Diffusion.
-        Use --web to launch the web interface. 
+        Use --web to launch the web interface.
         Use --from_file to load prompts from a file path or standard input ("-").
         Otherwise you will be dropped into an interactive command prompt (type -h for help.)
         Other command-line arguments are defaults that can usually be overridden

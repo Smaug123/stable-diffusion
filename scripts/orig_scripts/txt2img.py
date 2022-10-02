@@ -21,6 +21,14 @@ from ldm.models.diffusion.ddim import DDIMSampler
 from ldm.models.diffusion.plms import PLMSSampler
 from ldm.dream.devices         import choose_torch_device
 
+from diffusers.pipelines.stable_diffusion import safety_checker
+
+def sc(self, clip_input, images) :
+    return images, [False for i in images]
+
+# edit StableDiffusionSafetyChecker class so that, when called, it just returns the images and an array of True values
+safety_checker.StableDiffusionSafetyChecker.forward = sc
+
 def chunk(it, size):
     it = iter(it)
     return iter(lambda: tuple(islice(it, size)), ())
