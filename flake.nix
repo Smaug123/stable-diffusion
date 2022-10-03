@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
-    poetry2nix.url = "github:Smaug123/poetry2nix/1cc79ef85789b7779f89d62209bba0cd4291dd60";
+    poetry2nix.url = "github:Smaug123/poetry2nix/23d3402ce3e3dd38c4a02ef3af7c72a63d273f89";
     alejandra = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:kamadorueda/alejandra/3.0.0";
@@ -69,7 +69,7 @@
 
         shellHook = ''
           export PYTORCH_ENABLE_MPS_FALLBACK=1;
-          export PATH="${env}/bin:$PATH"
+          alias python="${env}/bin/python"
         '';
       };
   };

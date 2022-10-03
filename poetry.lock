@@ -2256,9 +2256,26 @@ tqdm = "*"
 
 [package.source]
 type = "git"
-url = "https://github.com/CompVis/taming-transformers.git"
-reference = "24268930bf1dce879235a7fddd0b2355b84d7ea6"
-resolved_reference = "24268930bf1dce879235a7fddd0b2355b84d7ea6"
+url = "https://github.com/illeatmyhat/taming-transformers"
+reference = "aeabaa34974f5db31e5f61d2c479612e80b4175f"
+resolved_reference = "aeabaa34974f5db31e5f61d2c479612e80b4175f"
+
+[[package]]
+name = "kornia"
+version = "0.6.7"
+description = ""
+category = "main"
+optional = false
+python-versions = "*"
+develop = false
+
+[package.dependencies]
+torch = "*"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.org/simple"
+reference = "pypi-public"
 
 [[package]]
 name = "tensorboard"
@@ -2412,7 +2429,7 @@ reference = "pypi-public"
 
 [[package]]
 name = "torch"
-version = "1.13.0.dev20220905"
+version = "1.13.0.dev20221003"
 description = "Tensors and Dynamic neural networks in Python with strong GPU acceleration"
 category = "main"
 optional = false
@@ -3451,6 +3468,9 @@ kiwisolver = [
     {file = "kiwisolver-1.4.4-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:36dafec3d6d6088d34e2de6b85f9d8e2324eb734162fba59d2ba9ed7a2043d5b"},
     {file = "kiwisolver-1.4.4.tar.gz", hash = "sha256:d41997519fcba4a1e46eb4a2fe31bc12f0ff957b2b81bac28db24744f333e955"},
 ]
+kornia = [
+    {file = "kornia-0.6.7-py2.py3-none-any.whl", hash = "sha256:e2908d888a3043bd6f950c514f00c1589f8d43cc25e4fb9b3ad1e66375146826"},
+]
 latent-diffusion = []
 markdown = [
     {file = "Markdown-3.4.1-py3-none-any.whl", hash = "sha256:08fb8465cffd03d10b9dd34a5c3fea908e20391a2a90b88d66362cb05beed186"},
@@ -4451,22 +4471,7 @@ toolz = [
     {file = "toolz-0.12.0.tar.gz", hash = "sha256:88c570861c440ee3f2f6037c4654613228ff40c93a6c25e0eba70d17282c6194"},
 ]
 torch = [
-    {file = "torch-1.13.0.dev20220905+cpu-cp310-cp310-linux_x86_64.whl", hash = "sha256:bd7d94f4174ebd06a9b5e7e52d22ddd6ef63332f92bdae7ab6d209d0a41075d9"},
-    {file = "torch-1.13.0.dev20220905+cpu-cp310-cp310-win_amd64.whl", hash = "sha256:774834c88a34ffae24849805467bb7b1c8b63a99c4dd54fe6d69f5b4274e7d43"},
-    {file = "torch-1.13.0.dev20220905+cpu-cp311-cp311-linux_x86_64.whl", hash = "sha256:95d338cff25e5ab3cc1afb6b32e12e08e9db3f3a88715121a1ed259b0e0b6209"},
-    {file = "torch-1.13.0.dev20220905+cpu-cp37-cp37m-linux_x86_64.whl", hash = "sha256:f121c41f7b3b0f912adda4df14c659f088a00c9b29c21428dc3aac17a36551ff"},
-    {file = "torch-1.13.0.dev20220905+cpu-cp37-cp37m-win_amd64.whl", hash = "sha256:1071917be17f0b03c514765e9de2c03ae3fc6d033e67af5afe3a88045b8835cc"},
-    {file = "torch-1.13.0.dev20220905+cpu-cp38-cp38-linux_x86_64.whl", hash = "sha256:1600789612cbb1ef723dcb248519677d8511993c4c556e5dd0ef68d0074eb0c6"},
-    {file = "torch-1.13.0.dev20220905+cpu-cp38-cp38-win_amd64.whl", hash = "sha256:cbb9df40405cafac464df74678bf64ea597fcf2d5d729392a4fa402b9937d93a"},
-    {file = "torch-1.13.0.dev20220905+cpu-cp39-cp39-linux_x86_64.whl", hash = "sha256:120da8b66cfa6a5c8c66b7c93dc54c7ad78fb490228a67b2b4225ac08e2d4ba0"},
-    {file = "torch-1.13.0.dev20220905+cpu-cp39-cp39-win_amd64.whl", hash = "sha256:e652c9513408bf84f9f67ce59b0f37d9ab1cc77328d1983f5d852e9067c53ad4"},
-    {file = "torch-1.13.0.dev20220905-cp310-none-macosx_10_9_x86_64.whl", hash = "sha256:e652c9513408bf84f9f67ce59b0f37d9ab1cc77328d1983f5d852e9067c53ad4"},
-    {file = "torch-1.13.0.dev20220905-cp310-none-macosx_11_0_arm64.whl", hash = "sha256:e652c9513408bf84f9f67ce59b0f37d9ab1cc77328d1983f5d852e9067c53ad4"},
-    {file = "torch-1.13.0.dev20220905-cp37-none-macosx_10_9_x86_64.whl", hash = "sha256:e652c9513408bf84f9f67ce59b0f37d9ab1cc77328d1983f5d852e9067c53ad4"},
-    {file = "torch-1.13.0.dev20220905-cp37-none-macosx_11_0_arm64.whl", hash = "sha256:e652c9513408bf84f9f67ce59b0f37d9ab1cc77328d1983f5d852e9067c53ad4"},
-    {file = "torch-1.13.0.dev20220905-cp38-none-macosx_10_9_x86_64.whl", hash = "sha256:e652c9513408bf84f9f67ce59b0f37d9ab1cc77328d1983f5d852e9067c53ad4"},
-    {file = "torch-1.13.0.dev20220905-cp38-none-macosx_11_0_arm64.whl", hash = "sha256:e652c9513408bf84f9f67ce59b0f37d9ab1cc77328d1983f5d852e9067c53ad4"},
-    {file = "torch-1.13.0.dev20220905-cp39-none-macosx_11_0_arm64.whl", hash = "sha256:5ccb1b9bbaf036d8be5967331bdd94852b072baca5dade785cfd427488891ba8"},
+    {file = "torch-1.13.0.dev20221003-cp39-none-macosx_11_0_arm64.whl", hash = "sha256:bfdfe9516a1a38c061d99374c00274dc011be7ccc1ae890026c85e0f144e8a9b"},
 ]
 torch-fidelity = [
     {file = "torch_fidelity-0.3.0-py3-none-any.whl", hash = "sha256:d01284825595feb7dc3eae3dc9a0d8ced02be764813a3483f109bc142b52a1d3"},

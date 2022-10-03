@@ -70,6 +70,7 @@ invisible-watermark = { version = "== 0.1.5", source = "pypi-public" }
 Jinja2 = { version = "== 3.1.2", source = "pypi-public" }
 jsonmerge = { version = "== 1.8.0", source = "pypi-public" }
 jsonschema = { version = "== 4.14.0", source = "pypi-public" }
+kornia = { version = "== 0.6.7", source = "pypi-public" }
 k-diffusion = { git = "https://github.com/crowsonkb/k-diffusion", rev = "4567328deec0f90a549dde53c1858cf7ed0140dd" }
 latent-diffusion = { git = "https://github.com/CompVis/latent-diffusion", rev = "a506df5756472e2ebaf9078affdde2c4f1502cd4" }
 Markdown = { version = "== 3.4.1", source = "pypi-public" }
@@ -169,7 +170,7 @@ fonttools = { version = "*", source = "pypi-public" }
 kiwisolver = { version = "*", source = "pypi-public" }
 fsspec = { git = "https://github.com/fsspec/filesystem_spec", rev = "025d846db553f7498c106326ac005656ebfa3bb7" }
 
-torch = { version = "== 1.13.0.dev20220905", source = "torch-repo" }
+torch = { version = "== 1.13.0.dev20221003", source = "torch-repo" }
 
 [build-system]
 requires = ["poetry-core"]
