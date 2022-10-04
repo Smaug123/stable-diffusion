@@ -143,7 +143,7 @@ toolz = { version = "== 0.12.0", source = "pypi-public" }
 torch-fidelity = { version = "== 0.3.0", source = "pypi-public" }
 torchdiffeq = { version = "== 0.2.3", source = "pypi-public" }
 torchmetrics = { version = "== 0.6.0", source = "pypi-public" }
-torchvision = { version = "== 0.11.3", source = "pypi-public" }
+torchvision = { git = "https://github.com/pytorch/vision", rev = "bddbd7e6d65ecacc2e40cf6c9e2059669b8dbd44" }
 tornado = { version = "== 6.2", source = "pypi-public" }
 tqdm = { version = "== 4.62.3", source = "pypi-public" }
 transformers = { version = "== 4.21.1", source = "pypi-public" }

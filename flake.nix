@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs";
-    poetry2nix.url = "github:Smaug123/poetry2nix/23d3402ce3e3dd38c4a02ef3af7c72a63d273f89";
+    poetry2nix.url = "github:Smaug123/poetry2nix/a9a9e19e3b487d4a26d7894a5d5f786cba7ba698";
     alejandra = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:kamadorueda/alejandra/3.0.0";
@@ -52,6 +52,7 @@
               ${pkgs.gnused}/bin/sed -i "s!with open('requirements.txt') as f:!requirements = ['numpy', 'Pillow', 'scipy', 'torch', 'torchvision', 'tqdm']!g" setup.py
               ${pkgs.gnused}/bin/sed -i "s!    requirements = f.read().splitlines()!!g" setup.py
             '';
+            nativeBuildInputs = (self.nativeBuildInputs or [ ]) ++ [self.requests];
           };
           opencv-python-headless = self.opencv-python;
           k-diffusion = super.k-diffusion.overridePythonAttrs {
@@ -60,6 +61,9 @@
               ${pkgs.gnused}/bin/sed -i "s!    kornia!!g" setup.cfg
             '';
             buildInputs = (self.buildInputs or []) ++ [self.clip];
+          };
+          clip = super.clip.overridePythonAttrs {
+            nativeBuildInputs = (self.nativeBuildInputs or []) ++ [self.requests];
           };
         });
       };
